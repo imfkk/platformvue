@@ -38,19 +38,19 @@
           })
       },
 
-    dologin2(){
-        var url="/vueApi/helloworld/login";
-        var data={};
-        data.name=this.name;
-        data.pwd=this.pwd;
+      dologin2() {
+        var url = "/vueApi/helloworld/login";
+        var data = {};
+        data.name = this.name;
+        data.pwd = this.pwd;
         this.$axios.post(url, data).then(value => {
-          console.log("asdada");
-          this.$router.push({path: 'index'})
-        }
-      ).catch(function (reason) {
-        console.log(reason);
-      })
-    }
+            console.log("asdada");
+            this.$router.push({path: 'index'})
+          }
+        ).catch(function (reason) {
+          console.log(reason);
+        })
+      }
 
     },
   }
