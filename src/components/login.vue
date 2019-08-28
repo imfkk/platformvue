@@ -3,7 +3,7 @@
     <div><span>登录</span></div>
     <div>账号：<input v-model="name"/></div>
     <div>密码：<input v-model="pwd"/></div>
-    <div><input type="button" value="登录" @click="dologin2()"/></div>
+    <div><input type="button" value="登录" @click="dologin()"/></div>
   </div>
 </template>
 
@@ -30,7 +30,8 @@
           }
         })
           .then(function (ret) {
-            this.$router.push({path:'/index'})
+            alert(this)
+            //this.$router.push({path:'/index'})
           })
           .catch(function (ret) {
 
