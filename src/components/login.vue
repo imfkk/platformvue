@@ -1,5 +1,6 @@
 <template>
   <div id="user">
+    <index></index>
     <div><span>登录</span></div>
     <div>账号：<input v-model="name"/></div>
     <div>密码：<input v-model="pwd"/></div>
@@ -8,6 +9,7 @@
 </template>
 
 <script>
+  import index from './index.vue'
   export default {
     name: "login",
     data() {
@@ -30,8 +32,8 @@
           }
         })
           .then(function (ret) {
-            alert(this)
-            //this.$router.push({path:'/index'})
+            //alert(this)
+            this.$router.push({path:'/index'})
           })
           .catch(function (ret) {
 
@@ -53,6 +55,9 @@
       }
 
     },
+    components:{
+     index
+    }
   }
 </script>
 
